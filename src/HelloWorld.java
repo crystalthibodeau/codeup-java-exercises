@@ -47,13 +47,13 @@ public class HelloWorld {
 //        String question = "What is your favorite color?";
 //        System.out.println(theAnswer);
 //        System.out.println(question);
-//        int myNumber = 12 + 12 * 2;
-//        System.out.println(myNumber);
-//
-//        myNumber += 9;
-////         equivalent to
-//        myNumber = myNumber + 9;
-//        System.out.println(myNumber);
+        int myNumber = 12 + 12 * 2;
+        System.out.println(myNumber);
+
+        myNumber += 9;
+//         equivalent to
+        myNumber = myNumber + 9;
+        System.out.println(myNumber);
 
 
         int myInteger = 900;
@@ -76,8 +76,44 @@ public class HelloWorld {
         String myString = "Have a wonderful day!";
         System.out.println(myString);
 
-        long myNumber = 123L;
-        System.out.println(myNumber);
+        float myNumber2 = 3.14F;
+        System.out.println(myNumber2);
 
+//        int x = 5;
+//        System.out.println(x++);
+//        System.out.println(x);
+
+        int x = 5;
+        System.out.println(++x);
+        System.out.println(x);
+
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+////        int three = (int) o;
+//
+//        int three = (int) "three";
+//
+//        System.out.println(three);
+
+
+
+//=======Rewrite the following expressions using the relevant shorthand assignment operators:
+
+//        int x = 4;
+//        x = x + 5;
+//
+//        int x = 3;
+//        int y = 4;
+//        y = y * x;
+//
+//        int x = 10;
+//        int y = 2;
+//        x = x / y;
+//        y = y - x
+//
+//
+//        What happens if you assign a value to a numerical variable that is larger (or smaller) than the type can hold? What happens if you increment a numeric variable past the type's capacity?
+
+//        Hint: Integer.MAX_VALUE is a class constant (we'll learn more about these later) that holds the maximum value for the int type.
     }
 }
