@@ -126,8 +126,12 @@ public class HelloWorld {
         //8.
 //        myNumber = 123;
 //        System.out.println(myNumber);
+//        long numm = 3.14; //ask Thomas about number 8....
+//        int nummm = 3.14;
 
         //9.
+//        float myNumber2 = (float) 3.14;
+//        ====OR====
 //        float myNumber2 = 3.14F;
 //        System.out.println(myNumber2);
 
@@ -147,10 +151,17 @@ public class HelloWorld {
         //12.
 //        String theNumberThree = "three";
 //        Object o = theNumberThree;
-//        int three = (int) o;
+//        System.out.println(o);
+//        int three = (int) o; //does not work inconvertible types
 //
-//        int three = (int) "three";
+//        int three = (int) "three";  //does not work inconvertible types
 //        System.out.println(three);
+
+//        Integer theNumberThree = 3;
+//        Object o = theNumberThree;
+//        int three = (int) o;
+//        System.out.println(three); //DOES work
+
 
 
 //13.
