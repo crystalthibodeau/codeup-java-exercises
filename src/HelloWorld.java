@@ -97,7 +97,7 @@ public class HelloWorld {
 //        System.out.println(almostPi);
 
 
-//        ==========START OF LESSON========
+//        ==================================================START OF LESSON=============================================
 
         //1.
 //        int myFavoriteNumber = 22;
@@ -168,7 +168,7 @@ public class HelloWorld {
 
 
 //13.
-//=======Rewrite the following expressions using the relevant shorthand assignment operators:
+//==============Rewrite the following expressions using the relevant shorthand assignment operators:====================
 
         //a.
 //        int x = 4;
