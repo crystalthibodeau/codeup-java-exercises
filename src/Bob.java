@@ -15,6 +15,7 @@ public class Bob {
 
 
 
+
 //        System.out.println("Ask Bob A question");
 //        String input = scanner.nextLine();
 //        if(input.endsWith("!")){
@@ -26,24 +27,29 @@ public class Bob {
 //        }else{
 //            System.out.println("Whatever");
 //        }
-        while (true) {
-            System.out.print("\nAsk Bob A question:\n");
-            String userInput = scanner.nextLine();
-            if (userInput.endsWith("?")) {
-                System.out.println("\nBob: \"Sure.\"");
-            } else if (userInput.endsWith("!")) {
-                System.out.println("\nBob: \"Whoa, chill out!\"");
-            } else if (userInput.isEmpty()) {
-                System.out.println("\nBob: \"Fine. Be that way!\"");
-            } else {
-                System.out.println("\nBob: \"Whatever.\"");
-            }
-            System.out.println("\nKeep talking to Bob? [y/n]\n");
-            String option = scanner.nextLine();
-            if (option.equals("n")) {
-                System.out.println("\nBob: \"Fine. BYE!\"");
-                break;
-            }
-        }
+//        do {
+//            System.out.print("\nAsk Bob A question:\n");
+//            String userInput = scanner.nextLine();
+//            if (userInput.endsWith("?")) {
+//                System.out.println("\nBob: \"Sure.\"");
+//            } else if (userInput.endsWith("!")) {
+//                System.out.println("\nBob: \"Whoa, chill out!\"");
+//            } else if (userInput.isEmpty()) {
+//                System.out.println("\nBob: \"Fine. Be that way!\"");
+//            } else {
+//                System.out.println("\nBob: \"Whatever.\"");
+//            }
+//            System.out.println("\nKeep talking to Bob? [y/n]\n");
+//            String option = scanner.nextLine();
+//            if (option.equals("n")) {
+//                System.out.println("\nBob: \"Fine. BYE!\"");
+//                break;
+//            }
+//        }while (true);
+
+        System.out.print("enter a number to receive the cubed value:");
+        int userInput = scanner.nextInt();
+        userInput = userInput * userInput * userInput;
+        System.out.print(userInput);
     }
 }
