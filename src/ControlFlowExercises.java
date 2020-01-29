@@ -4,7 +4,7 @@ public class ControlFlowExercises {
     public static void main(String[] args) {
 //        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\n Hello!"); //or System.out.format
+//        System.out.println("\n Hello!"); //or System.out.format
 
 //        ===========1.Loop Basics==========
 //
@@ -46,11 +46,19 @@ public class ControlFlowExercises {
 //        256
 //        65536
 
-//
+
 //        double i = 2;
 //        do{
 //            System.out.printf("%.0f\n", i);
 //            i = Math.pow(i, 2);
+//        }while(i<1000000);
+
+//        ======convert int to double and back======
+
+//        int i = 2;
+//        do{
+//            System.out.printf("%.0f\n", i);
+//            i = (int) Math.pow(i, 2);
 //        }while(i<1000000);
 
 //
@@ -199,21 +207,23 @@ public class ControlFlowExercises {
 //
 //        Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
 
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Want to continue Y/N");
-//        String option = scanner.next();
-//        while (option.equalsIgnoreCase("y")){
-//            System.out.println("What number would you like to go up to?");
-//            double number = scanner.nextDouble();
-//            System.out.println("number|squared|cubed");
-//            System.out.print("------|-------|-----");
-//            for(double i = 1; i<=number; i++){
-//                System.out.printf("%n%-5.0f |%-6.0f |%.0f", i, Math.pow(i,2), Math.pow(i,3));
-//            }
-//            System.out.println(" ");
-//            System.out.println("Want to continue? Y/N");
-//            option = scanner.next();
-//        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Want to continue Y/N");
+        String option = scanner.next();
+        while (option.equalsIgnoreCase("y")){
+            System.out.println("What number would you like to go up to?");
+            double number = scanner.nextDouble();
+            System.out.println("number|squared|cubed");
+            System.out.print("------|-------|-----");
+            for(double i = 1; i<=number; i++){
+                System.out.printf("%n%-5.0f |%-6.0f |%.0f", i, Math.pow(i,2), Math.pow(i,3));
+            }
+            System.out.println(" ");
+            System.out.println("Want to continue? Y/N");
+            option = scanner.next();
+        }
+
+        }
+
 
     }
-}
