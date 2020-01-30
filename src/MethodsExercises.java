@@ -73,7 +73,7 @@ public class MethodsExercises {
 //    Use the .random method of the java.lang.Math class to generate random numbers.
 //    Game Development 101
 
-        dice();
+//        dice();
 //
 //    Welcome to the world of game development!
 //

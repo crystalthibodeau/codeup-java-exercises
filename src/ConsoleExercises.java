@@ -83,21 +83,25 @@ public class ConsoleExercises {
 
 ////=====volume bonus=======
 ////
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Enter the width and length and height: ");
+//        String input = scanner.nextLine(); //Example input: 2.5 10.0
+//
+//        //Get location of space in order to separate values.  This only works if the user enters 2 values separated by a space.
+//        int space = input.indexOf(' ');
+//        int lastSpace = input.lastIndexOf(' ');
+//
+//        //Parse the values, using the index of the space
+//        float w = Float.parseFloat(input.substring(0, space));
+//        float l = Float.parseFloat(input.substring(space, lastSpace));
+//        float h = Float.parseFloat(input.substring(lastSpace, input.length()));
+//
+//        float volume = w*l*h;
+//
+//        System.out.println("Volume = " + volume);
 
-        System.out.println("Enter the width and length and height: ");
-        String input = scanner.nextLine(); //Example input: 2.5 10.0
 
-        //Get location of space in order to separate values.  This only works if the user enters 2 values separated by a space.
-        int space = input.indexOf(' ');
-        int lastSpace = input.lastIndexOf(' ');
-
-
-        //Parse the values, using the index of the space
-        float w = Float.parseFloat(input.substring(0, space));
-        float l = Float.parseFloat(input.substring(space, lastSpace));
-        float h = Float.parseFloat(input.substring(space, input.length()));
-        System.out.println(l);
 
 ////        Calculate area/circumference
 //        float area = w*l;
