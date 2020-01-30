@@ -1,26 +1,10 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class AdventureGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         letsPlay();
-//
-        String elephant = "\n            .''~ ~ ~ _ _ _ - - - - ~~._\n" +
-                "           /` _      )  `\\              `\\\n" +
-                "          /`  a)    /     |               `\\\n" +
-                "         :`        /      |                 \\\n" +
-                "    <`-._|`  .-.  (      /   .            `;\\\\\n" +
-                "     `-. `--'_.'-.;\\___/'   .      .       | \\\\\n" +
-                "  _     /:--`     |        /     /        .'  \\\\\n" +
-                " (\"\\   /`/        |       '     '         /    :`;\n" +
-                " `\\'\\_/`/         .\\     /`~`=-.:        /     ``\n" +
-                "   `._.'          /`\\    |      `\\      /(\n" +
-                "                 /  /\\   |        `Y   /  \\\n" +
-                "                /  /  |  |         |  /`\\  \\\n" +
-                "               /  |   |  |         |  |  |  |\n" +
-                "              \"---\"  /___|        /___|  /__|\n" +
-                "                     '\"\"\"         '\"\"\"  '\"\"\"\n";
-
 
       String mountain ="          /\\\n" +
               "         /  \\\n" +
@@ -31,25 +15,6 @@ public class AdventureGame {
               "    /  /    \\/ /\\     \\    /    \\ \\  /    \\/ /   /  \\/  \\/  \\  /    \\   \\\n" +
               "   /  /      \\/  \\/\\   \\  /      \\    /   /          \\        \\      \\   \\\n " +
               "__/__/_______/___/__\\___\\__________________________________________________";
-//        System.out.print(mountain);
-
-//
-        String cityStart ="                                            ^ \n" +
-                "                              ________     ^^^\n" +
-                "                             |[] [] []|  .^^^^^.\n" +
-                "                             |[] [] []| | [] [] |\n" +
-                "                           __|[]_[] []| | [] [] |\n" +
-                "                          |++++++|] []| | [] [] |      Ready to Play? [y/n]\n" +
-                "                          |++++++|] []| | [] [] |\n" +
-                "                          |++++++|]_[]|_|_[] [] |\n" +
-                "                          |++++++|=|=|=|=|=| [] |\n" +
-                "                          |++++++|=|=|=|=|=| [] |\n" +
-                "__________     ___________|++II++|  __II___| II |_______   _________  _________\n" +
-                "    ______________      _______________   ______________      ______________\n" +
-                "______________ __________________  ___________    __________________    ____________" ;
-//         System.out.print(cityStart);
-
-
 
         String mountainRoad = "                                                \n" +
                 "                 ___                         \n" +
@@ -69,9 +34,6 @@ public class AdventureGame {
                 "                             /     |     \\\n" +
                 "                            /      |      \\\n" +
                 "                           /       |       \\\n";
-//        System.out.print(mountainRoad);
-//
-
     }
 
     public static void letsPlay() {
@@ -140,8 +102,9 @@ public class AdventureGame {
                         String inputEnter3 = scanner.next();
 
                         if (inputEnter3.equals("a")) {
+                            Random rand = new Random();
+                            playerHealth -= rand.nextInt(4) + 1;
                             gameHealth -= 2;
-                            playerHealth -= 2;
                             System.out.println("Eddy swipes you with his husk!\n");
                             System.out.printf("[Your Health: %d] [Animals Combined Health: %d]",playerHealth, gameHealth);
                             System.out.println("\nNot a bad choice, but we need to keep going!\n");
@@ -153,8 +116,9 @@ public class AdventureGame {
 
                         }
                         if (inputEnter3.equals("b")) {
+                            Random rand = new Random();
                             gameHealth -= 0;
-                            playerHealth -= 5;
+                            playerHealth -= rand.nextInt(5) + 1;
                             System.out.println("Eddy is not a bull!!!\n");
                             System.out.printf("[Your Health: %d] [Animals Combined Health: %d]",playerHealth, gameHealth);
                             System.out.println("\nNot a great choice, Eddy tripped you as he ran by.. but we need to keep going!\n");
@@ -166,8 +130,9 @@ public class AdventureGame {
                             }
                         }
                         if (inputEnter3.equals("c")) {
+                            Random rand = new Random();
                             gameHealth -= 0;
-                            playerHealth -= 11;
+                            playerHealth -= rand.nextInt(11) + 1;
                             System.out.println("Oops.... Eddy is too big for that net...\n");
                             System.out.printf("[Your Health: %d] [Animals Combined Health: %d]",playerHealth, gameHealth);
                             System.out.println("Not a great choice, Eddy pretty much ran you over!!!\n");
@@ -192,5 +157,4 @@ public class AdventureGame {
         }while(true);
 
     }
-
     }
