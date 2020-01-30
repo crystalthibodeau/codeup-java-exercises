@@ -20,7 +20,7 @@ public class MethodsExercises {
 
 //        dice();
 
-//        highLow();
+        highLow();
 
     }
 //===================================================BONUS'S============================================================
@@ -57,9 +57,7 @@ public class MethodsExercises {
         return one - two;
     }
 
-    public static double multiplyMethods(double one, double two) {
-        return one * two;
-    }
+    public static double multiplyMethods(double one, double two) { return one * two; }
 
     public static double divisionMethod(double one, double two) {
         return one / two;
@@ -67,7 +65,9 @@ public class MethodsExercises {
 
     public static double modulus(double one, double two) {
         return one % two;
+
     }
+
 //==================================================Question #2=========================================================
 
 //    2.Create a method that validates that user input is in a certain range
@@ -219,25 +219,27 @@ public class MethodsExercises {
 
         Random rand = new Random();
         int numberToGuess = rand.nextInt(100) + 1;
+        double count = 0;
 
-    do {
+
+        do {
         Scanner scanner = new Scanner(System.in);
         int guessNum = scanner.nextInt();
        if(guessNum < numberToGuess){
            System.out.println("HIGHER");
+           count++;
        }
        else if(guessNum > numberToGuess){
            System.out.println("LOWER");
+           count++;
        }
         else if(guessNum == numberToGuess){
-           System.out.println("CORRECT!");
+           System.out.printf("CORRECT! It took you %.0f guesses!", count);
            break;
        }
     }while(true);
 
     }
-
-
 
 
 //==================================================End of Main=========================================================
