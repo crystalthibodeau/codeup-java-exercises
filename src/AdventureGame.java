@@ -5,9 +5,10 @@ public class AdventureGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 //        letsPlay();
-        System.out.print(multiply(10, 10));
 
-      String mountain ="          /\\\n" +
+
+
+        String mountain ="          /\\\n" +
               "         /  \\\n" +
               "        /    \\   /\\\n" +
               "       /      \\ /  \\\n" +
@@ -165,13 +166,6 @@ public class AdventureGame {
 
     }
 
-    public static int multiply(int a, int b){
-        int sum =0;
-        for(int i =0; i <b; i++){
-            sum +=a;
-        }
-        return sum;
-    }
 
 
     }
