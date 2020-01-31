@@ -4,7 +4,8 @@ import java.util.Random;
 public class AdventureGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        letsPlay();
+//        letsPlay();
+        System.out.print(multiply(10, 10));
 
       String mountain ="          /\\\n" +
               "         /  \\\n" +
@@ -15,6 +16,7 @@ public class AdventureGame {
               "    /  /    \\/ /\\     \\    /    \\ \\  /    \\/ /   /  \\/  \\/  \\  /    \\   \\\n" +
               "   /  /      \\/  \\/\\   \\  /      \\    /   /          \\        \\      \\   \\\n " +
               "__/__/_______/___/__\\___\\__________________________________________________";
+//        System.out.println(mountain);
 
         String mountainRoad = "                                                \n" +
                 "                 ___                         \n" +
@@ -34,6 +36,9 @@ public class AdventureGame {
                 "                             /     |     \\\n" +
                 "                            /      |      \\\n" +
                 "                           /       |       \\\n";
+//        System.out.println(mountainRoad);
+
+
     }
 
     public static void letsPlay() {
@@ -112,6 +117,7 @@ public class AdventureGame {
                             String inputEnter4 = scanner.next();
                             if (inputEnter4.equals("y")) {
                                 System.out.println("That was close!");
+                                break;
                             }
 
                         }
@@ -153,8 +159,19 @@ public class AdventureGame {
 
             } else if (!option.equalsIgnoreCase("y")) {
                 System.out.println("Goodbye...\n");
+                break;
             }
         }while(true);
 
     }
+
+    public static int multiply(int a, int b){
+        int sum =0;
+        for(int i =0; i <b; i++){
+            sum +=a;
+        }
+        return sum;
+    }
+
+
     }
