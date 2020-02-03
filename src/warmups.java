@@ -44,10 +44,10 @@ public class warmups {
 //    Input second binary number: 11
 //    Expected Output
 //    Sum of two binary numbers: 101
-public static void binary(int a, int b) {
-    System.out.println(Integer.toBinaryString(a));
-    System.out.println(Integer.toBinaryString(b));
-}
+//public static void binary(int a, int b) {
+//    System.out.println(Integer.toBinaryString(a));
+//    System.out.println(Integer.toBinaryString(b));
+//}
 
     public static String addBinary(String first, String second) {
         int b1 = Integer.parseInt(first, 2);
