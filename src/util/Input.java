@@ -23,12 +23,12 @@ private Scanner scanner;
    }
 
    public String getString(){
-       System.out.print("Enter something!");
+//       System.out.print("Enter something!");
        return scanner.nextLine();
    }
 
    public boolean yesNo(){
-       System.out.print("Enter yes OR no [y/n]");
+       System.out.print("Enter [y/n]..");
        String next = scanner.next();
        return next.toLowerCase().equals("y") || next.equals("yes");
    }
@@ -36,9 +36,12 @@ private Scanner scanner;
    public int getInt(int min, int max){
         int answer;
         do{
-            System.out.print("Enter a number between " + min + " and " + max + ": ");
+//            System.out.print("Enter a number between " + min + " and " + max + ": ");
+            System.out.print("\nEnter choice..\n");
             answer = this.scanner.nextInt();
-
+            if(answer<min || answer>max){
+                System.out.print("\nInvalid choice, please try again..");
+            }
         }while(answer < min || answer > max);
         return answer;
    }
