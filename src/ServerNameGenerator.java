@@ -7,7 +7,7 @@ public class ServerNameGenerator {
 //    Create a method that will return a random element from an array of strings.
 public static String randomNum(String[] array) {
     Random rand = new Random();
-    int indexVal = rand.nextInt(array.length) ;
+    int indexVal = rand.nextInt(array.length) +1 ;
 //    int indexVal = new Random().nextInt(array.length); //without initialization of new random
     return array[indexVal];
 }

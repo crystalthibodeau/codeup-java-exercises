@@ -8,8 +8,7 @@ public class ArraysExercises {
         return people;
     }
 //=====================================================Question 1=======================================================
-
-    //    1.Array Basics
+//    1.Array Basics
 //
 //    Create a class inside of src named ArraysExercises. Create a main method for this class to do your work.
     public static void main(String[] args) {
