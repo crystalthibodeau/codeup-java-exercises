@@ -4,7 +4,7 @@ import java.util.Random;
 public class AdventureGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-//        letsPlay();
+        letsPlay();
 
 
 

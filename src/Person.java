@@ -68,34 +68,9 @@ private String name;
 //        System.out.println(person2.getName());//remember the friend reference. if two people know john and john becomes jane they both have to re-learn jane's name...
 
 //==================================================Question #3=========================================================
-//    3.Create a package inside of src named util. Inside of util, create a class named Input that has a private property named scanner. When an instance of this object is created, the scanner property should be set to a new instance of the Scanner class. The class should have the following methods, all of which return command line input from the user:
-//
-//    String getString()
-//    boolean yesNo()
-//    int getInt(int min, int max)
-//    int getInt()
-//    double getDouble(double min, double max)
-//    double getDouble()
-//    The yesNo method should return true if the user enters y, yes, or variants thereof, and false otherwise.
-//
-//            The getInt(int min, int max) method should keep prompting the user for input until they give an integer within the min and max. The getDouble method should do the same thing, but with decimal numbers.
-//
-//    Create another class named InputTest that has a static main method that uses all of the methods from the Input class.
+//    3.Continue to input.java and inputTest.java
 //==================================================Question #4=========================================================
-
-//      4.Circle class
-//    Inside of src, create a directory named shapes. Inside of shapes, create a class named Circle. This class should have a private radius property that is set through the constructor, and various methods for getting information about the circle, detailed below.
-//
-//    public Circle(double radius)
-//    public double getArea()
-//    public double getCircumference()
-//    Inside of shapes, create a class named CircleApp that prompts the user for the radius of the circle using your Input class, creates a Circle object, and displays the circumference and area. (Note that you will need to import your Input class.)
-//
-//    The formulas for circumference and area:
-//
-//    circumference = 2 x pi x radius
-//    area = pi x (radius ^ 2)
-//    For the value of pi, use the PI constant of the Math class.
+//   4.Continue to circle.java from shapes
 //==================================================Start of Main=======================================================
 
     public static void main(String[] args) {
