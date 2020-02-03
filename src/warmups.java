@@ -4,12 +4,14 @@ public class warmups {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("enter a number");
-        double inputNumber = scanner.nextInt();
-        long sum = 0;
-        for(int i=1;i<=inputNumber;i++) {
-            sum += i;
-        }
+//        System.out.println("enter a number");
+//        double inputNumber = scanner.nextInt();
+//        long sum = 0;
+//        for(int i=1;i<=inputNumber;i++) {
+//            sum += i;
+//        }
+//        System.out.print(addBinary("10","11"));
+//        binary(10,11);
 //        System.out.print(sum);
 
 //        System.out.print(multiply(10, 10));
@@ -36,4 +38,22 @@ public class warmups {
         }
         return product;
     }
+//    17. Write a Java program to add two binary numbers. Go to the editor
+//    Input Data:
+//    Input first binary number: 10
+//    Input second binary number: 11
+//    Expected Output
+//    Sum of two binary numbers: 101
+public static void binary(int a, int b) {
+    System.out.println(Integer.toBinaryString(a));
+    System.out.println(Integer.toBinaryString(b));
+}
+
+    public static String addBinary(String first, String second) {
+        int b1 = Integer.parseInt(first, 2);
+        int b2 = Integer.parseInt(second, 2);
+        int sum = b1 + b2;
+        return Integer.toBinaryString(sum);
+    }
+
 }
