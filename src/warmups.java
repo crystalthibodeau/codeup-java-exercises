@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class warmups {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
 //        System.out.println("enter a number");
@@ -17,22 +17,22 @@ public class warmups {
 //        System.out.print(multiply(10, 10));
 
 
-
 //        System.out.print(toThePower(2, 16));
-
+        factorial();
     }
 
 
-    public static int multiply(int a, int b){
-        int sum =0;
-        for(int i =0; i <b; i++){
-            sum +=a;
+    public static int multiply(int a, int b) {
+        int sum = 0;
+        for (int i = 0; i < b; i++) {
+            sum += a;
         }
         return sum;
     }
-    public static int toThePower(int a, int b){
-        int product =1;
-        for(int i =0; i <b; i++){
+
+    public static int toThePower(int a, int b) {
+        int product = 1;
+        for (int i = 0; i < b; i++) {
 //            product *=a;
             product = multiply(product, a);
         }
@@ -56,4 +56,16 @@ public class warmups {
         return Integer.toBinaryString(sum);
     }
 
+    public static void factorial() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("enter a number");
+        long userNum = scanner.nextLong();
+        for (int i = 1; i <= userNum; i++) {
+            if (userNum % i == 0) {
+                System.out.print(i);
+
+            }
+        }
+    }
 }
