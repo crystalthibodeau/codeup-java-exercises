@@ -16,7 +16,7 @@ public class Student {
     public String getName(){
         return this.name;
     }
-    // returns the average of the students grades
+
     public double getGradeAverage(){
         double sum =0;
         for(int grade : grades){
