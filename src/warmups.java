@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class warmups {
@@ -18,26 +20,36 @@ public class warmups {
 
 
 //        System.out.print(toThePower(2, 16));
-        factorial();
-    }
+//        factorial();
 
+        String[] fruits = new String[]{"banana", "kiwi", "apple", "grapefruit", "pear", "jackfruit"};
+        int length = fruits.length;
+        ArrayList<String> newFruits = new ArrayList<>();
 
-    public static int multiply(int a, int b) {
-        int sum = 0;
-        for (int i = 0; i < b; i++) {
-            sum += a;
+        for (int i = 0; i < length ; i++) {
+            newFruits.add(fruits[i]);
         }
-        return sum;
+        System.out.println(newFruits);
+
     }
 
-    public static int toThePower(int a, int b) {
-        int product = 1;
-        for (int i = 0; i < b; i++) {
-//            product *=a;
-            product = multiply(product, a);
-        }
-        return product;
-    }
+
+//    public static int multiply(int a, int b) {
+//        int sum = 0;
+//        for (int i = 0; i < b; i++) {
+//            sum += a;
+//        }
+//        return sum;
+//    }
+//
+//    public static int toThePower(int a, int b) {
+//        int product = 1;
+//        for (int i = 0; i < b; i++) {
+////            product *=a;
+//            product = multiply(product, a);
+//        }
+//        return product;
+//    }
 //    17. Write a Java program to add two binary numbers. Go to the editor
 //    Input Data:
 //    Input first binary number: 10
@@ -49,23 +61,24 @@ public class warmups {
 //    System.out.println(Integer.toBinaryString(b));
 //}
 
-    public static String addBinary(String first, String second) {
-        int b1 = Integer.parseInt(first, 2);
-        int b2 = Integer.parseInt(second, 2);
-        int sum = b1 + b2;
-        return Integer.toBinaryString(sum);
-    }
+//    public static String addBinary(String first, String second) {
+//        int b1 = Integer.parseInt(first, 2);
+//        int b2 = Integer.parseInt(second, 2);
+//        int sum = b1 + b2;
+//        return Integer.toBinaryString(sum);
+//    }
 
-    public static void factorial() {
+//    public static void factorial() {
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("enter a number");
+//        long userNum = scanner.nextLong();
+//        for (int i = 1; i <= userNum; i++) {
+//            if (userNum % i == 0) {
+//                System.out.print(i);
+//
+//            }
+//        }
+//    }
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("enter a number");
-        long userNum = scanner.nextLong();
-        for (int i = 1; i <= userNum; i++) {
-            if (userNum % i == 0) {
-                System.out.print(i);
-
-            }
-        }
-    }
 }

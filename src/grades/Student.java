@@ -30,12 +30,12 @@ public class Student {
 
     public static void main(String[] args) {
 
-        Student Student1 = new Student("Student1", 90);
-        System.out.println(Student1.getGradeAverage());
-        System.out.println(Student1.getName());
-        Student1.addGrade(70);
-        System.out.println(Student1.getGradeAverage());
-        System.out.println(Student1.getGrades());
+//        Student Student1 = new Student("Student1", 90);
+//        System.out.println(Student1.getGradeAverage());
+//        System.out.println(Student1.getName());
+//        Student1.addGrade(70);
+//        System.out.println(Student1.getGradeAverage());
+//        System.out.println(Student1.getGrades());
 
 
 

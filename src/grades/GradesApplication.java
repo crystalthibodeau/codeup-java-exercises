@@ -19,7 +19,7 @@ public class GradesApplication {
         Thomas.addGrade(98);
         Thomas.addGrade(100);
 
-        Student Matt = new Student("Matt", 87);
+        Student Matt = new Student("Matt", 96);
         Thomas.addGrade(90);
         Thomas.addGrade(95);
 
@@ -30,7 +30,7 @@ public class GradesApplication {
 
 
         System.out.println("Welcome!");
-        System.out.println("Here are the GitHub usernames of our students:");
+        System.out.println("\nHere are the GitHub usernames of our students:");
         prompts();
 
     }
@@ -38,17 +38,17 @@ public class GradesApplication {
     public static void prompts() {
 
         System.out.println(Students.keySet());
-        System.out.println("What student would you like to see more information on?");
+        System.out.println("\nWhat student would you like to see more information on?");
         Scanner scanner = new Scanner(System.in);
         String inputName = scanner.next();
 
         if (Students.containsKey(inputName)) {
-            System.out.printf("Name: %s - GitHub Username: %s - Current Average: %.2f", Students.get(inputName).getName(), inputName, Students.get(inputName).getGradeAverage());
+            System.out.printf("\nName: %s - GitHub Username: %s - Current Average: %.2f\n", Students.get(inputName).getName(), inputName, Students.get(inputName).getGradeAverage());
             System.out.println("\nWould you like to see another student?");
             String inputYOrNo = scanner.next();
 
                 if (inputYOrNo.equalsIgnoreCase("n") || inputYOrNo.equalsIgnoreCase("no")) {
-                    System.out.println("Goodbye, and have a wonderful day!");
+                    System.out.println("\nGoodbye, and have a wonderful day!");
                 }
                 else {
                 prompts();
