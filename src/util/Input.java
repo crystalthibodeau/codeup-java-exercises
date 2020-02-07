@@ -33,6 +33,23 @@ private Scanner scanner;
        return next.toLowerCase().equals("y") || next.equals("yes");
    }
 
+
+    public int getInt() {
+        System.out.println("Input number...");
+        while (true) {
+            try {
+                int userInput = Integer.valueOf(this.scanner.nextLine());
+                System.out.println("\nInput acceptable\n");
+                return userInput;
+            } catch (NumberFormatException e) {
+                System.out.println("\nInvalid. Input not an integer. Try again.\n");
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    //before try/catch
    public int getInt(int min, int max){
         int answer;
         do{
@@ -46,10 +63,10 @@ private Scanner scanner;
         return answer;
    }
 
-   public int getInt(){
-       System.out.print("Enter a number");
-       return scanner.nextInt();
-   }
+//   public int getInt(){
+//       System.out.print("Enter a number");
+//       return scanner.nextInt();
+//   }
 
    public double getDouble(double min, double max){
        double answer;

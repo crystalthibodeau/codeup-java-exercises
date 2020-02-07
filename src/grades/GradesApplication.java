@@ -34,7 +34,7 @@ public class GradesApplication {
         prompts();
 
     }
-
+//add string print method here to be called in student
     public static void prompts() {
 
         System.out.println(Students.keySet());
