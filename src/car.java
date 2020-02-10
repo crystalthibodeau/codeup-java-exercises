@@ -1,6 +1,6 @@
 public class car implements vehicle {
     public void go(double miles){
-        System.out.printf("Go, VROOOM for %.0f miles", miles);
+        System.out.printf("Go, VROOOM for %.0f miles\n", miles);
     }
 
     @Override
@@ -15,7 +15,7 @@ public class car implements vehicle {
 
     @Override
     public void method3(String message) {
-
+        System.out.println(message);
     }
 
 }
