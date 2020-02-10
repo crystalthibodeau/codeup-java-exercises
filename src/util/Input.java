@@ -1,86 +1,215 @@
+//package util;
+//
+//import java.util.Scanner;
+//
+//public class Input {
+//    private Scanner scanner;
+//
+//    public Input(){
+//        this.scanner = new Scanner(System.in);
+//    }
+//
+//    public String getString(){
+//        String answer;
+//        System.out.println("Enter a string: ");
+//        answer = this.scanner.next();
+//        return answer;
+//    }
+//
+//    public String getString(String prompt) {
+//        String answer;
+//        System.out.println(prompt);
+//        answer = this.scanner.next();
+//        return answer;
+//    }
+//
+//    public boolean yesNo(){
+//        String answer;
+//        System.out.println("What is your answer? (yes/no): ");
+//        answer = this.scanner.next();
+//        return answer.toLowerCase().startsWith("y");
+//    }
+//
+//    public boolean yesNo(String prompt){
+//        String answer;
+//        System.out.println(prompt);
+//        answer = this.scanner.next();
+//        return answer.toLowerCase().startsWith("y");
+//    }
+//
+//    public int getInt(int min, int max) {
+//        int answer;
+//        do {
+//            System.out.println("Enter an integer betweeen " + min + " and " + max +": ");
+//            answer = this.scanner.nextInt();
+//        } while (answer < min || answer > max);
+//        return answer;
+//    }
+//
+//    public int getInt(String prompt, int min, int max) {
+//        int answer;
+//        do {
+//            System.out.println(prompt);
+//            answer = this.scanner.nextInt();
+//        } while (answer < min || answer > max);
+//        return answer;
+//    }
+//
+//    public int getInt() {
+//        int answer;
+//        System.out.println("Enter an integer: ");
+//        answer = this.scanner.nextInt();
+//        return answer;
+//    }
+//
+//    public int getInt(String prompt) {
+//        int answer;
+//        System.out.println(prompt);
+//        answer = this.scanner.nextInt();
+//        return answer;
+//    }
+//
+//    public double getDouble(double min, double max) {
+//        double answer;
+//        do {
+//            System.out.println("Enter a double betweeen " + min + " and " + max +": ");
+//            answer = this.scanner.nextDouble();
+//        } while (answer < min || answer > max);
+//        return answer;
+//    }
+//
+//    public double getDouble(String prompt, double min, double max) {
+//        double answer;
+//        do {
+//            System.out.println(prompt);
+//            answer = this.scanner.nextDouble();
+//        } while (answer < min || answer > max);
+//        return answer;
+//    }
+//
+//    public double getDouble() {
+//        return getDouble("Enter a double: ");
+//    }
+//
+//    public double getDouble(String prompt) {
+//        double answer;
+//        System.out.println(prompt);
+//        answer = this.scanner.nextDouble();
+//        return answer;
+//    }
+//
+//}
+
 package util;
 
 import java.util.Scanner;
 
 public class Input {
-//    3.Create a package inside of src named util. Inside of util, create a class named Input that has a private property named scanner. When an instance of this object is created, the scanner property should be set to a new instance of the Scanner class. The class should have the following methods, all of which return command line input from the user:
-//
-//    String getString()
-//    boolean yesNo()
-//    int getInt(int min, int max)
-//    int getInt()
-//    double getDouble(double min, double max)
-//    double getDouble()
-//    The yesNo method should return true if the user enters y, yes, or variants thereof, and false otherwise.
-//
-//            The getInt(int min, int max) method should keep prompting the user for input until they give an integer within the min and max. The getDouble method should do the same thing, but with decimal numbers.
-//
-//    Create another class named InputTest that has a static main method that uses all of the methods from the Input class.
-private Scanner scanner;
+    private Scanner scanner;
 
-   public Input(){
-       this.scanner = new Scanner(System.in);
-   }
-
-   public String getString(){
-//       System.out.print("Enter something!");
-       return scanner.nextLine();
-   }
-
-   public boolean yesNo(){
-       System.out.print("Enter [y/n]..");
-       String next = scanner.next();
-       return next.toLowerCase().equals("y") || next.equals("yes");
-   }
-
-
-    public int getInt() {
-        System.out.println("Input number...");
-        while (true) {
-            try {
-                int userInput = Integer.valueOf(this.scanner.nextLine());
-                System.out.println("\nInput acceptable\n");
-                return userInput;
-            } catch (NumberFormatException e) {
-                System.out.println("\nInvalid. Input not an integer. Try again.\n");
-                e.printStackTrace();
-            }
-        }
+    public Input(){
+        this.scanner = new Scanner(System.in);
     }
 
+    public String getString(){
+        return getString("Enter a string: ");
+    }
 
-    //before try/catch
-   public int getInt(int min, int max){
-        int answer;
-        do{
-//            System.out.print("Enter a number between " + min + " and " + max + ": ");
-            System.out.print("\nEnter choice..\n");
-            answer = this.scanner.nextInt();
-            if(answer<min || answer>max){
-                System.out.print("\nInvalid choice, please try again..");
-            }
-        }while(answer < min || answer > max);
+    public String getString(String prompt) {
+        String answer;
+        System.out.println(prompt);
+        answer = this.scanner.next();
         return answer;
-   }
+    }
 
-//   public int getInt(){
-//       System.out.print("Enter a number");
-//       return scanner.nextInt();
-//   }
+    public boolean yesNo(){
+        return yesNo("What is your answer? (yes/no): ");
+    }
 
-   public double getDouble(double min, double max){
-       double answer;
-       do{
-           System.out.print("Enter a number between " + min + " and " + max + ": ");
-           answer = this.scanner.nextDouble();
-       }while(answer < min || answer > max);
+    public boolean yesNo(String prompt){
+        String answer;
+        System.out.println(prompt);
+        answer = this.scanner.next();
+        return answer.toLowerCase().startsWith("y");
+    }
 
-       return answer;
-   }
+    public int getInt(int min, int max) {
+        return getInt("Enter an integer betweeen " + min + " and " + max +": ",min,max);
+    }
 
-    public double getDouble(){
-        System.out.print("Enter a number");
-        return scanner.nextDouble();
-   }
+    public int getInt(String prompt, int min, int max) {
+        int answer = Integer.MIN_VALUE;
+        do {
+            System.out.println(prompt);
+            String response = this.scanner.nextLine();
+            try {
+                answer = Integer.valueOf(response);
+            } catch (NumberFormatException nfe) {
+
+            }
+        } while (answer == Integer.MIN_VALUE || answer < min || answer > max);
+        return answer;
+    }
+
+    public int getInt() {
+        return getInt("Enter an integer: ");
+    }
+
+    public int getInt(String prompt) {
+        int answer = Integer.MIN_VALUE;
+        do {
+            System.out.println(prompt);
+
+            String response = this.scanner.nextLine();
+            try {
+                answer = Integer.valueOf(response);
+            } catch (NumberFormatException nfe) {
+//                System.out.println("Error");
+            }
+        } while (answer == Integer.MIN_VALUE);
+//        answer = this.scanner.nextInt();
+        return answer;
+    }
+
+    public double getDouble(double min, double max) {
+        return getDouble("Enter a double betweeen " + min + " and " + max +": ",min,max);
+    }
+
+    public double getDouble(String prompt, double min, double max) {
+        double answer = 0;
+        boolean success = false;
+        do {
+            System.out.println(prompt);
+            String response = this.scanner.nextLine();
+            try {
+                answer = Double.valueOf(response);
+                success = true;
+            } catch (NumberFormatException nfe) {
+                success = false;
+            }
+//            answer = this.scanner.nextDouble();
+        } while (!success || answer < min || answer > max);
+        return answer;
+    }
+
+    public double getDouble() {
+        return getDouble("Enter a double: ");
+    }
+
+    public double getDouble(String prompt) {
+        double answer = 0;
+        boolean success = false;
+        do {
+            System.out.println(prompt);
+            String response = this.scanner.nextLine();
+            try {
+                answer = Double.valueOf(response);
+                success = true;
+            } catch (NumberFormatException nfe) {
+
+            }
+        } while (!success);
+        return answer;
+    }
 
 }
