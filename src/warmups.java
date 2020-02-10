@@ -21,17 +21,34 @@ public class warmups {
 
 //        System.out.print(toThePower(2, 16));
 //        factorial();
+//
+//        String[] fruits = new String[]{"banana", "kiwi", "apple", "grapefruit", "pear", "jackfruit"};
+//        int length = fruits.length;
+//        ArrayList<String> newFruits = new ArrayList<>();
+//
+//        for (int i = 0; i < length ; i++) {
+//            newFruits.add(fruits[i]);
+//        }
+//        System.out.println(newFruits);
 
-        String[] fruits = new String[]{"banana", "kiwi", "apple", "grapefruit", "pear", "jackfruit"};
-        int length = fruits.length;
-        ArrayList<String> newFruits = new ArrayList<>();
+        //    Warmup: write a java program that reads in a series of 3-5 lines and then writes them out to the console
 
-        for (int i = 0; i < length ; i++) {
-            newFruits.add(fruits[i]);
-        }
-        System.out.println(newFruits);
+        System.out.println("enter something");
+        String input1 = scanner.next();
+        System.out.println("enter something else");
+        String input2 = scanner.next();
+        System.out.println("enter something else again");
+        String input3 = scanner.next();
+        StringReturn(input1, input2, input3);
 
     }
+
+    public static void StringReturn(String input1, String input2, String input3){
+        System.out.println(input1);
+        System.out.println(input2);
+        System.out.println(input3);
+    }
+
 
 
 //    public static int multiply(int a, int b) {
