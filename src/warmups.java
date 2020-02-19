@@ -6,6 +6,8 @@ public class warmups {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+
+        System.out.println(divideByZero(4,2));
 //        System.out.println("enter a number");
 //        double inputNumber = scanner.nextInt();
 //        long sum = 0;
@@ -33,21 +35,21 @@ public class warmups {
 
         //    Warmup: write a java program that reads in a series of 3-5 lines and then writes them out to the console
 
-        System.out.println("enter something");
-        String input1 = scanner.next();
-        System.out.println("enter something else");
-        String input2 = scanner.next();
-        System.out.println("enter something else again");
-        String input3 = scanner.next();
-        StringReturn(input1, input2, input3);
+//        System.out.println("enter something");
+//        String input1 = scanner.next();
+//        System.out.println("enter something else");
+//        String input2 = scanner.next();
+//        System.out.println("enter something else again");
+//        String input3 = scanner.next();
+//        StringReturn(input1, input2, input3);
 
     }
 
-    public static void StringReturn(String input1, String input2, String input3){
-        System.out.println(input1);
-        System.out.println(input2);
-        System.out.println(input3);
-    }
+//    public static void StringReturn(String input1, String input2, String input3){
+//        System.out.println(input1);
+//        System.out.println(input2);
+//        System.out.println(input3);
+//    }
 
 
 
@@ -97,5 +99,16 @@ public class warmups {
 //            }
 //        }
 //    }
+    public static double divideByZero(int n, int n2){
+        int return1 = 0;
+        try{
+            return1 =  n/n2;
+        }catch (ArithmeticException ae){
+            if(n == 0 || n2 == 0){
+                throw new ArithmeticException("tried to devide by zero...");
+            }
+        }
+        return (double) return1;
+    }
 
 }

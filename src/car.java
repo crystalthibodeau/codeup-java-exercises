@@ -20,3 +20,4 @@ public class car implements vehicle {
 
 }
 //implements an interface instead of extending an abstract class
+
