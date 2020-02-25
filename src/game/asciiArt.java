@@ -51,13 +51,4 @@ public class asciiArt extends methods{
             "    ______________      _______________   ______________      ______________\n" +
             "______________ __________________  ___________    __________________    ____________";
 
-//    public static String printString (String name){
-//        return name;
-//    }
-//    public String getString(String prompt){
-//        String answer;
-//        System.out.println(prompt);
-//        answer = this.scanner.next();
-//        return answer;
-//    }
 }

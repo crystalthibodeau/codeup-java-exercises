@@ -1,13 +1,15 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class warmups {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
-        System.out.println(compareNumbers(20.0,25.0));
+        int[] nums = {1,2,3,4,5};
+        System.out.println(Arrays.toString(products(nums)));
+//        System.out.println(compareNumbers(20.0,25.0));
 
 //        System.out.println(divideByZero(4,2));
 //        System.out.println("enter a number");
@@ -113,15 +115,15 @@ public class warmups {
 //        return (double) return1;
 //    }
 
-    public static String compareNumbers(double n1 , double n2){
-        if(n1 < n2){
-            return n1 + " < " + n2;
-        }else if(n1 > n2){
-            return n1 + " > " + n2;
-        }else{
-            return n1 + " == " + n2;
-        }
-    }
+//    public static String compareNumbers(double n1 , double n2){
+//        if(n1 < n2){
+//            return n1 + " < " + n2;
+//        }else if(n1 > n2){
+//            return n1 + " > " + n2;
+//        }else{
+//            return n1 + " == " + n2;
+//        }
+//    }
 
 //    @test
 //    public void testCompareNumbers(){
@@ -130,5 +132,24 @@ public class warmups {
 //        assertEqual(compareNumbers.compareNumbers(30.0, 30), "30.0 == 30.0");
 //
 //    }
+
+//    public static ArrayList<ArrayList<Integer>> findMe(ArrayList<Integer> listToTry, int target){
+//         ArrayList<ArrayList<Integer>> sums = new ArrayList<>();
+//
+//         return sums;
+//    }
+public static int[] products(int[] nums){
+    int[] result = new int[nums.length];
+    result[nums.length-1]=1;
+    for(int i=nums.length-2; i>=0; i--){
+        result[i]=result[i+1]*nums[i+1];
+    }
+    int left=1;
+    for(int i=0; i<nums.length; i++){
+        result[i]=result[i]*left;
+        left = left*nums[i];
+    }
+    return result;
+}
 
 }
