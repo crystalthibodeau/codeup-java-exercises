@@ -7,30 +7,52 @@ import java.util.Scanner;
 public class denim {
     public static void main(String[] args) {
 
+//        int[] array = {1, 2, 3, 4, 5, 6}; OR ->
         int[] array = new int[]{1, 2, 3, 4, 5, 6};
+        String[] array2 = new String[]{"hello", "there", "3", "4", "5", "6"};
 
-        String[] array2 = new String[]{"1", "2", "3", "4", "5", "6"};
+        reversed(array);
+        reversedString(array2);
 
-        System.out.println("array before reverse: " + Arrays.toString(array) );
-        for(int i=0; i<array.length/2; i++){
-            int temp = array[i];
-            array[i] = array[array.length -i -1];
-            array[array.length -i -1] = temp;
-        }
-        System.out.println("array after reverse: " + Arrays.toString(array) );
-
-
-//        callback for object array
-//        reverse(array);
-        //=======================Main Method End=======================
+    //        callback for object array
+    //        reverse(array);
+    //=======================Main Method End=======================
     }
+
+
     //==================You are outside Main Method now================
 
-//    works if array is assigned as object
-//    public static void reverse(Object[] arr) {
-//        List<Object> list = Arrays.asList(arr);
-//        Collections.reverse(list);
-//        System.out.println(Arrays.toString(list.toArray()));
-//    }
-//=======================This is the end=======================
+    //    works if array is assigned as object
+    public static void reverse(Object[] arr) {
+        List<Object> list = Arrays.asList(arr);
+        Collections.reverse(list);
+        System.out.println(Arrays.toString(list.toArray()));
+    }
+    public static void reversed(int[] arr){
+        System.out.println("array before reverse: " + Arrays.toString(arr) );
+
+        for(int i=0; i<arr.length/2; i++){
+            int temp = arr[i];
+            arr[i] = arr[arr.length -i -1];
+            arr[arr.length -i -1] = temp;
+        }
+
+        System.out.println("array after reverse: " + Arrays.toString(arr) );
+    }
+
+    public static void reversedString(String[] arr){
+        System.out.println("array before reverse: " + Arrays.toString(arr) );
+
+        for(int i=0; i<arr.length/2; i++){
+            String temp = arr[i];
+            arr[i] = arr[arr.length -i -1];
+            arr[arr.length -i -1] = temp;
+        }
+
+        System.out.println("array after reverse: " + Arrays.toString(arr) );
+    }
+
+
+
+    //=======================This is the end=======================
 }
