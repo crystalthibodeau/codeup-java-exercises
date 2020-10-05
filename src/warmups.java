@@ -3,6 +3,7 @@ import org.w3c.dom.ls.LSOutput;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class warmups {
@@ -10,44 +11,54 @@ public class warmups {
         Scanner scanner = new Scanner(System.in);
 
         int[] nums = {1,2,3,4,5};
-        System.out.println(Arrays.toString(products(nums)));
-        System.out.println(compareNumbers(20.0,25.0));
+//        System.out.println(Arrays.toString(products(nums)));
+//        System.out.println(compareNumbers(20.0,25.0));
 
 
-        String input = "hello there how are you today";
-        String[] output = input.split(" ");
-        String result = "";
-        for(int i = 0; i < input.split("\\s+").length; i++) {
-            System.out.println(input.split("\\s+")[i]);
-            for(int x = output[i].length()-1; x >= 0; x--){
-                result = result + output[i].charAt(x);
-            }
-            result = result + " ";
-
-        }
-        System.out.println(result);
-
-
-        System.out.println(divideByZero(4,2));
-        System.out.println("enter a number");
-        double inputNumber = scanner.nextInt();
-        long sum = 0;
-        for(int i=1;i<=inputNumber;i++) {
-            sum += i;
-        }
-        System.out.print(addBinary("10","11"));
-        binary(10,11);
-        System.out.print(sum);
-
-        System.out.print(multiply(10, 10));
+//        String input = "hello there how are you today";
+//        String[] output = input.split(" ");
+//        String result = "";
+//        for(int i = 0; i < input.split("\\s+").length; i++) {
+//            System.out.println(input.split("\\s+")[i]);
+//            for(int x = output[i].length()-1; x >= 0; x--){
+//                result = result + output[i].charAt(x);
+//            }
+//            result = result + " ";
+//
+//        }
+//        System.out.println(result);
 
 
-        System.out.print(toThePower(2, 16));
-        factorial();
+//        System.out.println(divideByZero(4,2));
+//        System.out.println("enter a number");
+//        double inputNumber = scanner.nextInt();
+//        long sum = 0;
+//        for(int i=1;i<=inputNumber;i++) {
+//            sum += i;
+//        }
+//        System.out.print(addBinary("10","11"));
+//        binary(10,11);
+//        System.out.print(sum);
+
+//        System.out.print(multiply(10, 10));
+
+
+//        System.out.print(toThePower(2, 16));
+//        factorial();
 
         String[] fruits = new String[]{"banana", "kiwi", "apple", "grapefruit", "pear", "jackfruit"};
         int length = fruits.length;
         ArrayList<String> newFruits = new ArrayList<>();
+
+
+        ArrayList<Integer> ints = new ArrayList<>();
+        ints.add(2);
+        ints.set(0, 3);
+        ints.add(2);
+        List <Integer> inted = new ArrayList<>();
+        inted.add(4);
+        System.out.println(ints);
+        System.out.println(inted);
 
         for (int i = 0; i < length ; i++) {
             newFruits.add(fruits[i]);
@@ -56,13 +67,13 @@ public class warmups {
 
 //            Warmup: write a java program that reads in a series of 3-5 lines and then writes them out to the console
 
-        System.out.println("enter something");
-        String input1 = scanner.next();
-        System.out.println("enter something else");
-        String input2 = scanner.next();
-        System.out.println("enter something else again");
-        String input3 = scanner.next();
-        StringReturn(input1, input2, input3);
+//        System.out.println("enter something");
+//        String input1 = scanner.next();
+//        System.out.println("enter something else");
+//        String input2 = scanner.next();
+//        System.out.println("enter something else again");
+//        String input3 = scanner.next();
+//        StringReturn(input1, input2, input3);
 
     }
 
