@@ -13,7 +13,7 @@ public class denim {
 
         reversed(array);
         reversedString(array2);
-
+        swap(array);
     //        callback for object array
     //        reverse(array);
     //=======================Main Method End=======================
@@ -28,6 +28,7 @@ public class denim {
         Collections.reverse(list);
         System.out.println(Arrays.toString(list.toArray()));
     }
+
     public static void reversed(int[] arr){
         System.out.println("array before reverse: " + Arrays.toString(arr) );
 
@@ -52,7 +53,15 @@ public class denim {
         System.out.println("array after reverse: " + Arrays.toString(arr) );
     }
 
+    public static void swap(int[] arr){
+        System.out.println("array before swap: " + Arrays.toString(arr) );
+            int swap1 = arr[0];
+            int swap2 = arr[arr.length -1];
+            arr[0] = swap2;
+            arr[arr.length -1] = swap1;
 
+        System.out.println("array after swap: " + Arrays.toString(arr) );
+    }
 
     //=======================This is the end=======================
 }
