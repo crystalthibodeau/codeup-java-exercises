@@ -1,8 +1,5 @@
 import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class denim {
     public static void main(String[] args) {
@@ -10,10 +7,18 @@ public class denim {
 //        int[] array = {1, 2, 3, 4, 5, 6}; OR ->
         int[] array = new int[]{1, 2, 3, 4, 5, 6};
         String[] array2 = new String[]{"hello", "there", "3", "4", "5", "6"};
+        ArrayList<Integer> intList = new ArrayList<>();
+        intList.add(1);
+        intList.add(2);
+        intList.add(3);
+        intList.add(4);
+        intList.add(5);
+
 
         reversed(array);
         reversedString(array2);
         swap(array);
+        swapList(intList);
     //        callback for object array
     //        reverse(array);
     //=======================Main Method End=======================
@@ -63,5 +68,13 @@ public class denim {
         System.out.println("array after swap: " + Arrays.toString(arr) );
     }
 
+    public static void swapList(ArrayList<Integer> arr){
+        System.out.println("array before swap list: " + arr );
+        int swap1 = arr.get(0);
+        int swap2 = arr.get(arr.size() -1);
+        arr.set(0, swap2);
+        arr.set(arr.size() -1, swap1);
+        System.out.println("array after swap list: " + arr);
+    }
     //=======================This is the end=======================
 }
